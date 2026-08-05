@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Logs - Simple LMS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="brand">Simple LMS</div>
+    <a href="home">Home</a>
+    <a href="course">Course</a>
+    <a href="progress">Progress</a>
+    <a href="logs">Logs</a>
+    <a href="logout">Logout</a>
+    <div class="right" id="who"></div>
+  </div>
+
+  <div class="container">
+
+    <div class="card">
+      <h2>Clickstream Log Report</h2>
+      <p>
+        Every action of every learner, newest first. This table is the whole point of
+        the assignment - it is built exactly like a Moodle log report.
+      </p>
+      <button class="btn" id="refresh-btn">Refresh</button>
+      <span class="small" id="count"></span>
+    </div>
+
+    <div class="card">
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>User</th>
+            <th>Event context</th>
+            <th>Component</th>
+            <th>Event name</th>
+            <th>Description</th>
+            <th>Origin</th>
+            <th>IP address</th>
+          </tr>
+        </thead>
+        <tbody id="log-rows">
+          <tr><td colspan="8">Loading...</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <script>var PAGE_CONTEXT = 'Course: Introduction to Learning Analytics';</script>
+  <script src="js/clickstream.js"></script>
+  <script src="js/logs.js"></script>
+
+</body>
+</html>
