@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home - Simple LMS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="brand">Simple LMS</div>
+    <a href="home">Home</a>
+    <a href="course">Course</a>
+    <a href="progress">Progress</a>
+    <a href="logs">Logs</a>
+    <a href="logout">Logout</a>
+    <div class="right" id="who"></div>
+  </div>
+
+  <div class="container">
+
+    <div class="card">
+      <h2>Welcome to Simple LMS</h2>
+      <p>
+        This is a very small Learning Management System built for the
+        Learning Analytics assignment. Every single thing you do here
+        (opening a page, playing a video, answering a quiz question) is
+        saved into a clickstream database.
+      </p>
+      <p>You can look at all of that data yourself on the <b>Logs</b> page.</p>
+    </div>
+
+    <div class="card">
+      <h3>My Course</h3>
+      <p><b>Introduction to Learning Analytics</b></p>
+      <p>2 lessons, 2 videos, 1 quiz.</p>
+      <a href="course" class="btn">Open Course</a>
+      <a href="progress" class="btn btn-grey">My Progress</a>
+    </div>
+
+  </div>
+
+  <script>var PAGE_CONTEXT = 'Site: Simple LMS';</script>
+  <script src="js/clickstream.js"></script>
+
+</body>
+</html>
