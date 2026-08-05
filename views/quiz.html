@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz - Simple LMS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="brand">Simple LMS</div>
+    <a href="home">Home</a>
+    <a href="course">Course</a>
+    <a href="progress">Progress</a>
+    <a href="logs">Logs</a>
+    <a href="logout">Logout</a>
+    <div class="right" id="who"></div>
+  </div>
+
+  <div class="container">
+
+    <div class="card">
+      <h2>Learning Analytics Quiz</h2>
+      <p>5 multiple choice questions. Every answer you click is recorded.</p>
+    </div>
+
+    <div class="card">
+      <div id="questions">Loading questions...</div>
+      <button class="btn" id="submit-btn">Submit Quiz</button>
+      <p class="error" id="quiz-error"></p>
+    </div>
+
+    <div class="card" id="result-card" style="display:none;">
+      <h3>Your Result</h3>
+      <div class="result" id="result"></div>
+      <br>
+      <a href="progress" class="btn">See My Progress</a>
+      <a href="logs" class="btn btn-grey">See the Logs</a>
+    </div>
+
+  </div>
+
+  <script>var PAGE_CONTEXT = 'Quiz: Learning Analytics Quiz';</script>
+  <script src="js/clickstream.js"></script>
+  <script src="js/quiz.js"></script>
+
+</body>
+</html>
