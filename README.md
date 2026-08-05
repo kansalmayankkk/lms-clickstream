@@ -129,7 +129,7 @@ node --version
 Then:
 
 ```bash
-git clone https://github.com/<your-username>/lms-clickstream.git
+git clone https://github.com/kansalmayankkk/lms-clickstream.git
 cd lms-clickstream
 npm install
 ```
@@ -242,7 +242,7 @@ git commit -m "Initial project setup"
 # ... more commits ...
 
 git branch -M main
-git remote add origin https://github.com/<your-username>/lms-clickstream.git
+git remote add origin https://github.com/kansalmayankkk/lms-clickstream.git
 git push -u origin main
 ```
 
