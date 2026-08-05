@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Simple LMS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="brand">Simple LMS</div>
+  </div>
+
+  <div class="login-box">
+    <div class="card">
+      <h2>Learner Login</h2>
+
+      <form id="login-form">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" autocomplete="off">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" autocomplete="off">
+
+        <button type="submit" class="btn">Login</button>
+      </form>
+
+      <p class="error" id="error"></p>
+
+      <p class="hint">
+        Demo users:<br>
+        student1 / 123<br>
+        student2 / 123
+      </p>
+    </div>
+  </div>
+
+  <script>
+    var form = document.getElementById('login-form');
+    var errorBox = document.getElementById('error');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      fetch('login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username: username, password: password })
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          if (data.ok) {
+            window.location.href = 'home';
+          } else {
+            errorBox.textContent = data.message;
+          }
+        })
+        .catch(function () {
+          errorBox.textContent = 'Something went wrong. Is the server running?';
+        });
+    });
+  </script>
+
+</body>
+</html>
