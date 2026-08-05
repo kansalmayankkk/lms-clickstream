@@ -1,6 +1,5 @@
 # Presentation — 10 Slides
 
-*(Speaker notes are under each slide. Keep the slides light and talk from the notes.)*
 
 ---
 
@@ -9,8 +8,8 @@
 # Simple LMS with Clickstream Tracking
 ### Assignment 1 — Learning Analytics and Educational Data Mining
 
-Name: ______________
-Roll number: ______________
+Name: Mayank kansal
+Roll number: 24b3019
 Date: August 2026
 
 **Notes:** Introduce yourself and say in one line what you built: a small learning app that records
