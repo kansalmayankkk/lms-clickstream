@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 1 - Simple LMS</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="brand">Simple LMS</div>
+    <a href="home">Home</a>
+    <a href="course">Course</a>
+    <a href="progress">Progress</a>
+    <a href="logs">Logs</a>
+    <a href="logout">Logout</a>
+    <div class="right" id="who"></div>
+  </div>
+
+  <div class="container">
+
+    <div class="card">
+      <h2>Lesson 1 - What is Learning Analytics?</h2>
+      <p class="small">Course: Introduction to Learning Analytics</p>
+    </div>
+
+    <div class="card">
+      <h3>Reading Material</h3>
+      <p>
+        Learning Analytics is the measurement, collection, analysis and reporting of data about
+        learners and their contexts. The goal is to understand how students learn and to improve
+        the learning environment.
+      </p>
+      <p>
+        Every time a learner opens a page, plays a video or answers a quiz question, that small
+        action can be stored as data. When we collect thousands of these small actions we can start
+        to see patterns: which lessons are confusing, which videos students re-watch, and which
+        learners may need help.
+      </p>
+      <p>
+        Teachers can then use these patterns to change the way they teach, and students can use
+        their own dashboards to see how much they have completed. That is exactly what the
+        <b>Progress</b> page and the <b>Logs</b> page in this app are doing.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Video: But what is a neural network? (3Blue1Brown)</h3>
+      <div class="video-box">
+        <div id="player">
+          <p class="video-fallback">
+            Loading the video... If it does not appear, check your internet connection or
+            <a href="https://www.youtube.com/watch?v=aircAruvnKk" target="_blank">watch it on YouTube</a>.
+          </p>
+        </div>
+      </div>
+      <p class="small">
+        Play, pause and finish events from this video are recorded in the clickstream table.
+      </p>
+      <button class="btn btn-grey" onclick="markVideoWatched()">Mark video as watched</button>
+      <p class="small" id="video-msg"></p>
+    </div>
+
+    <div class="card">
+      <a href="lesson2" class="btn">Next: Lesson 2</a>
+      <a href="course" class="btn btn-grey">Back to Course</a>
+    </div>
+
+  </div>
+
+  <script>
+    var PAGE_CONTEXT = 'Lesson: What is Learning Analytics?';
+    var VIDEO_ID = 'aircAruvnKk';
+    var VIDEO_KEY = 'lesson1-video';
+    var VIDEO_TITLE = '3Blue1Brown - But what is a neural network?';
+  </script>
+  <script src="js/clickstream.js"></script>
+  <script src="js/video.js"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      logEvent(PAGE_CONTEXT, 'Lesson', 'Reading opened', 'The user opened the reading material of lesson 1.');
+    });
+  </script>
+
+</body>
+</html>
