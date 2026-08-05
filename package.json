@@ -1,0 +1,23 @@
+{
+  "name": "lms-clickstream",
+  "version": "1.0.0",
+  "description": "A very simple Learning Management System (LMS) that records all learner activity as Moodle-style clickstream data.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "lms",
+    "clickstream",
+    "learning-analytics",
+    "express",
+    "sqlite"
+  ],
+  "author": "First Year Student",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "sqlite3": "^5.1.7"
+  }
+}

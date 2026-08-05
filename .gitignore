@@ -1,0 +1,4 @@
+node_modules/
+lms.db
+server.log
+.DS_Store
